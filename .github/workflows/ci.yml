@@ -22,6 +22,6 @@ jobs:
 
       - name: Push image
         run: |
-        docker login -u dlaw1 -p ${{secret.REGRISTRY_PASS}}
-        docker push dlaw1/portfolio
+          docker login -u dlaw1 -p ${{secret.REGRISTRY_PASS}}
+          docker push dlaw1/portfolio
           
