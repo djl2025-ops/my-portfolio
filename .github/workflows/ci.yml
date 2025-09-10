@@ -17,11 +17,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build image
-        run: docker build -t dlaw1/portfolio .
+        run: docker build -t ${{secrets.REGISTRY_USER}}/portfolio .
 
 
       - name: Push image
         run: |
-          docker login -u dlaw1 -p ${{secrets.REGISTRY_PASS}}
-          docker push dlaw1/portfolio
+          docker login -u ${{secrets.REGISTRY_USER}} -p ${{secrets.REGISTRY_PASS}}
+          docker push ${{secrets.REGISTRY_USER}}/portfolio
           
