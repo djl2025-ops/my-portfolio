@@ -32,7 +32,7 @@ jobs:
   needs: build
   runs-on: ubuntu-latest
   steps: 
-      -name: ssh to server
+      -name: SSH to server
       uses: appleboy/ssh-action@v1
       with:
       host: ${{ secrets.HOST }}
